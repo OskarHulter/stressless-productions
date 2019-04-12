@@ -1,4 +1,4 @@
-# Next.js TypeScript Starter Kit [![CircleCI](https://circleci.com/gh/deptno/next.js-typescript-starter-kit.svg?style=svg)](https://circleci.com/gh/deptno/next.js-typescript-starter-kit)
+# stressless.productions
 
 ![samples](assets/samples.png)
 
@@ -9,23 +9,10 @@
 
 ## Feature
  - TypeScript
+ - 
  - Styled-jsx
  - Module css **(PostCSS - cssnext, nested, import)**
  - SEO & analytics(Google Analytics, Facebook Pixel, <s>Naver Analytics</s>)
- - ~~Storybook **(support module css)**~~
- - Jest & Enzyme **(support module css)**
-
-### Load from CDN
- - font-awesome@5
-
-## Installation
-
-```sh
-git clone https://github.com/deptno/next.js-typescript-starter-kit my-project
-cd my-project
-rm -r .git
-yarn
-```
 
 ## Run :rocket:
 
