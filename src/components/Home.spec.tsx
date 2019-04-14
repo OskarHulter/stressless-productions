@@ -1,16 +1,15 @@
 import * as React from 'react'
-import {shallow} from 'enzyme'
+import { render } from 'react-testing-library'
+import { Home } from './Home'
 
-import {Home} from './Home'
+const props = {
+  labelText: 'I am a label'
+}
 
-describe('Component', () => {
-  describe('Home', () => {
-    it('should render without throwing an error', function () {
-      expect(shallow(<Home/>).contains(
-        <li>
-          usage classnames in Home.tsx
-        </li>
-      )).toEqual(true)
-    })
+describe('Home', () => {
+  it('renders without throwing an error', () => {
+    const { getByText } = render(<Home {...props} />)
+
+    getByText(props.labelText)
   })
 })

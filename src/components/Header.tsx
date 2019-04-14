@@ -4,7 +4,7 @@ import {Nav} from './Nav'
 export const Header: React.FunctionComponent = props =>
   <div>
     <h2>
-      header
+      Stressless Productions
     </h2>
     <Nav/>
   </div>
