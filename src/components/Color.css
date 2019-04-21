@@ -1,5 +1,31 @@
 :root {
-  --colorPrimary: #0057AC;
-  --colorSecondary: #FEDF00;
+    --colorPrimary: #7037BF;
+    --colorSecondary: #FF83C6;
+    --colorBackground: #0057AC;
+    --colorText: #E8CCC3;
+    --colorAffirmative: #11819C;
+    --colorNegative: #D92563;
+    --colorCaution: #FEDF00;
 }
 
+/* Color Theme Swatches in RGBA 
+.Purple-party-1-rgba {
+    color: rgba(255, 131, 198, 1);
+}
+
+.Purple-party-2-rgba {
+    color: rgba(112, 54, 191, 1);
+}
+
+.Purple-party-3-rgba {
+    color: rgba(216, 36, 98, 1);
+}
+
+.Purple-party-4-rgba {
+    color: rgba(232, 204, 195, 1);
+}
+
+.Purple-party-5-rgba {
+    color: rgba(17, 128, 156, 1);
+}
+*/
