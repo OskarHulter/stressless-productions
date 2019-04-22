@@ -1,6 +1,6 @@
 {
 	"name": "stressless.productions",
-	"version": "8.0.0",
+	"version": "0.0.1",
 	"main": "index.js",
 	"repository": "https://github.com/OskarHulter/stressless-productions",
 	"author": "Oskar Hulter",
@@ -85,10 +85,8 @@
 			}
 		},
 		"coveragePathIgnorePatterns": [
-			"/node_modules/",
-			"enzyme.js"
+			"/node_modules/"
 		],
-		"setupTestFrameworkScriptFile": "<rootDir>/enzyme.js",
 		"coverageReporters": [
 			"json",
 			"lcov",
