@@ -1,13 +1,18 @@
 {
-    "compilerOptions": {
-        "module": "esnext",
-        "target": "esnext",
-        "jsx": "preserve",
-        "sourceMap": false,
-        "moduleResolution": "node"
-    },
-    "exclude": [
-        "out",
-        ".next"
-    ]
+	"compilerOptions": {
+		"module": "esnext",
+		"target": "esnext",
+		"jsx": "preserve",
+		"sourceMap": false,
+		"moduleResolution": "node",
+		"noUnusedLocals": true,
+		"noUnusedParameters": true,
+		"preserveConstEnums": true,
+		"strict": true,
+		"strictNullChecks": true,
+	},
+	"exclude": [
+		"out",
+		".next"
+	]
 }

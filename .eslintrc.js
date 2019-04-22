@@ -3,13 +3,13 @@ module.exports = {
 		'browser': true,
 		'es6': true
 	},
-	'extends': {
+	'extends': [
 		'eslint:recommended',
 		'plugin-react/recommended',
 		'plugin:@typescript-eslint/recommended',
 		'prettier/@typescript-eslint',
 		'plugin:prettier/recommended'
-	},
+	],
 	'globals': {
 		'Atomics': 'readonly',
 		'SharedArrayBuffer': 'readonly'
