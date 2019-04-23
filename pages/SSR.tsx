@@ -1,6 +1,8 @@
 import * as React from 'react'
 import { Layout } from '../src/components/Layout'
 
+// Example of server side rendering?
+
 const SSR: React.NextFunctionComponent<Props> = props =>
   <Layout>
     {props.name}

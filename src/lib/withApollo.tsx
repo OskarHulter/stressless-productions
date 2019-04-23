@@ -4,7 +4,7 @@ import Head from 'next/head'
 import { getDataFromTree } from 'react-apollo'
 import cookie from 'cookie'
 import { isBrowser } from './isBrowser'
-import { ApolloClient, NormalizedCacheObject } from 'apollo-boost';
+import { ApolloClient, NormalizedCacheObject } from 'apollo-boost'
 
 function parseCookies(req?: any, options = {}) {
 	return cookie.parse(
@@ -88,11 +88,11 @@ export default (App: any) => {
 				getToken: () => {
 					return parseCookies().token
 				}
-			});
+			})
 		}
 
 		render() {
 			return <App {...this.props} apolloClient={this.apolloClient} />
 		}
-	};
-};
+	}
+}
