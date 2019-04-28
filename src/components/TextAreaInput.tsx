@@ -32,7 +32,6 @@ const TextAreaInput: React.FC<TextAreaInputProps> = props => {
 				{props.labelText}
 			</label>
 			<textarea
-				// {…props} How to deal with spread i TS?
 				className={inputClassName}
 				id={forId}
 				disabled={props.disabled}
