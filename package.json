@@ -7,16 +7,15 @@
 	"license": "MIT",
 	"private": true,
 	"scripts": {
-		"start:dev": "next",
-		"build:dev": "next build",
+		"dev": "next",
+		"devbuild": "next build",
 		"build": "NODE_ENV=production next build",
 		"export": "next export",
 		"analyze": "NODE_ENV=production ANALYZE=true next build",
 		"start": "next start",
 		"test": "jest",
-		"test:watch": "jest --watch",
-		"test:coverage": "jest --coverage",
-		"ts:check": "tsc --noEmit",
+		"watch": "jest --watch",
+		"coverage": "jest --coverage",
 		"cypress": "node_modules/.bin/cypress open"
 	},
 	"dependencies": {
