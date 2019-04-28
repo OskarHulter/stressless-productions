@@ -1,6 +1,11 @@
 import * as React from 'react'
+import styled from 'styled-components'
+
+const Title = styled.h1`
+  color: red;
+`
 
 export const Footer: React.FunctionComponent = props =>
   <footer>
-    <h2>Stressless productions</h2>
+    <title>Stressless productions</title>
   </footer>

@@ -1,5 +1,6 @@
 import * as React from 'react'
 import Document, { Head, Main, NextScript } from 'next/document'
+import { ServerStyleSheet } from 'styled-components'
 import {
 	DEV,
 	FB_TRACKING_ID,
@@ -15,6 +16,7 @@ export default class extends Document {
 		const documentProps = await Document.getInitialProps(...args)
 		const { req, renderPage } = args[0]
 		const page = renderPage()
+		const sheet = new ServerStyleSheet()
 
 		return { ...documentProps, ...page }
 	}
