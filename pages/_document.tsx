@@ -1,5 +1,10 @@
 import * as React from 'react'
-import Document, { Head, Main, NextScript } from 'next/document'
+import Document, {
+	Head,
+	Main,
+	NextScript,
+	DefaultDocumentIProps
+} from 'next/document'
 import { ServerStyleSheet } from 'styled-components'
 import {
 	DEV,
@@ -11,12 +16,15 @@ import {
 	SITE_TITLE
 } from '../src/constants/env'
 
-/*interface documentProps extends React.Props<documentProps> {
-}*/
+interface DocumentProps extends React.Props<DocumentProps> {
+	documentProps: DefaultDocumentIProps
+	page: any
+	styleTags: React.ReactElement<{}>
+}
 
-export default class extends Document {
+export default class extends Document<DocumentProps> {
 	static async getInitialProps(...args) {
-		const documentProps = await Document.getInitialProps(...args)
+		const documentProps = await Document.getInitialProps<any>(...args)
 		const { req, renderPage } = args[0]
 		const sheet = new ServerStyleSheet()
 
