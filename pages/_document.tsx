@@ -11,14 +11,22 @@ import {
 	SITE_TITLE
 } from '../src/constants/env'
 
+/*interface documentProps extends React.Props<documentProps> {
+}*/
+
 export default class extends Document {
 	static async getInitialProps(...args) {
 		const documentProps = await Document.getInitialProps(...args)
 		const { req, renderPage } = args[0]
-		const page = renderPage()
 		const sheet = new ServerStyleSheet()
 
-		return { ...documentProps, ...page }
+		const page = renderPage(App => props =>
+			sheet.collectStyles(<App {...props} />)
+		)
+
+		const styleTags = sheet.getStyleElement()
+
+		return { ...documentProps, ...page, styleTags }
 	}
 
 	render() {
@@ -43,6 +51,8 @@ export default class extends Document {
 						name="format-detection"
 						content="telephone=no, address=no, email=no"
 					/>
+
+					{this.props.styleTags}
 
 					<link
 						rel="stylesheet"
