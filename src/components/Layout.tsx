@@ -15,19 +15,19 @@ const theme = {
 }
 
 const GlobalStyle = createGlobalStyle`
-:root {
-  --colorPrimary: ${props => props.theme.colorPrimary};
+  :root {
+    --colorPrimary: ${props => props.theme.colorPrimary};
     --colorSecondary: ${props => props.theme.colorSecondary};
     --colorBackground: ${props => props.theme.colorBackground};
     --colorText: ${props => props.theme.colorText};
     --colorAffirmative: ${props => props.theme.colorAffirmative};
     --colorNegative: ${props => props.theme.colorNegative};
     --colorCaution: ${props => props.theme.colorCaution};
-} 
-body {
-  color: var(--colorPrimary);
-  background: var(--colorBackground);
-}
+  } 
+  body {
+    color: var(--colorPrimary);
+    background: var(--colorBackground);
+  }
 `
 export const Layout: React.FC = props =>
   <ThemeProvider theme={theme}>

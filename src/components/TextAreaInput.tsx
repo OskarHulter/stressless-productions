@@ -7,7 +7,6 @@ interface TextAreaInputProps extends React.Props<TextAreaInputProps> {
 	value: string
 	id: string
 	placeholder: string
-	className: string
 	labelClassName: string
 	disabled: boolean
 	name: string
@@ -15,16 +14,7 @@ interface TextAreaInputProps extends React.Props<TextAreaInputProps> {
 }
 
 const TextAreaInput: React.FC<TextAreaInputProps> = props => {
-	let inputClassName = `input${props.className ? ` ${props.className}` : ''}`
 	const forId = props.id || props.name
-
-	if (props.errorMessage) {
-		inputClassName = `${inputClassName} red-border`
-	}
-
-	if (props.disabled) {
-		inputClassName = `${inputClassName} disabled-input`
-	}
 
 	return (
 		<>
@@ -32,7 +22,6 @@ const TextAreaInput: React.FC<TextAreaInputProps> = props => {
 				{props.labelText}
 			</label>
 			<textarea
-				className={inputClassName}
 				id={forId}
 				disabled={props.disabled}
 				onChange={props.handleOnChange}
@@ -46,7 +35,6 @@ TextAreaInput.defaultProps = {
 	labelText: '',
 	errorMessage: '',
 	placeholder: '',
-	className: '',
 	labelClassName: 'large-heading',
 	disabled: false
 }

@@ -1,27 +1,21 @@
 import * as React from 'react'
 
 interface InputErrorProps extends React.Props<InputErrorProps> {
-    className: string,
-    errorMessage: string,
-    typographyClass: string
+    errorMessage: string
 }
 
 const InputError: React.FC<InputErrorProps> = props => {
-    const cssClasses = `${props.typographyClass} ${props.className}`
-
     if (!props.errorMessage) { return null }
 
     return (
-        <div className={cssClasses}>
+        <div>
             {props.errorMessage}
         </div>
     )
 }
 
 InputError.defaultProps = {
-    className: '',
-    errorMessage: '',
-    typographyClass: 'large-heading red-heading smaller-font-size unselectable'
+    errorMessage: ''
 }
 
 export default InputError

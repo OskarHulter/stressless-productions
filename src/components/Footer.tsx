@@ -10,15 +10,7 @@ const StyledFooter = styled.footer`
   background: purple;
 `
 
-interface FooterProps extends React.Props<FooterProps> {
-  tagline: string
-  contactDetails: string
-  className: string
-  disabled: boolean
-}
-
-
-export const Footer: React.FC<FooterProps> = props =>
+export const Footer: React.FC = props =>
   <StyledFooter>
     <Title>Stressless productions</Title>
   </StyledFooter>
