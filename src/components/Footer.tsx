@@ -1,16 +1,12 @@
 import * as React from 'react'
 import styled from 'styled-components'
 
-const Title = styled.h1`
-  color: red;
-`
-
 const StyledFooter = styled.footer`
-  color: red;
-  background: purple;
+  grid-area: footer;
+  background: --var(colorPrimary);
 `
 
 export const Footer: React.FC = props =>
   <StyledFooter>
-    <Title>Stressless productions</Title>
+    <h1>Stressless productions</h1>
   </StyledFooter>
