@@ -2,16 +2,17 @@ import App, { Container } from 'next/app'
 import * as React from 'react'
 import withApollo from '../src/lib/withApollo'
 import { ApolloProvider } from 'react-apollo'
-import { createGlobalStyle } from 'styled-components';
+import { createGlobalStyle } from 'styled-components'
 
-const colorPrimary = '#7037BF'
-const colorSecondary = '#FF83C6'
-const colorBackground = '#0057AC'
-const colorText = '#E8CCC3'
-const colorAffirmative = '#11819C'
-const colorNegative = '#D92563'
-const colorCaution = '#FEDF00'
-const textFont = '"HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif'
+const colorPrimary: string = '#7037BF'
+const colorSecondary: string = '#FF83C6'
+const colorBackground: string = '#0057AC'
+const colorText: string = '#E8CCC3'
+const colorAffirmative: string = '#11819C'
+const colorNegative: string = '#D92563'
+const colorCaution: string = '#FEDF00'
+const textFont: string =
+	'"HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif'
 
 const GlobalStyle = createGlobalStyle`
   :root {

@@ -1,12 +1,13 @@
 import * as React from 'react'
 import styled from 'styled-components'
 
-const StyledMain = styled.main`
-  grid-area: content;
-  background: --var(colorBackground);
+const StyledContent = styled.main`
+	grid-area: content;
+	background: --var(colorBackground);
 `
 
-export const Content: React.FC = props =>
-  <StyledMain>
-    <h4>This is the content</h4>
-  </StyledMain>
+export const Content: React.FC = props => (
+	<StyledContent>
+		<h4>This is the content</h4>
+	</StyledContent>
+)

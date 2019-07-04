@@ -3,38 +3,39 @@ import { Header } from './Header'
 import { Footer } from './Footer'
 import Head from 'next/head'
 import { Content } from './Content'
-import { ThemeProvider, createGlobalStyle } from 'styled-components';
+import { ThemeProvider, createGlobalStyle } from 'styled-components'
+import { Grid } from './Grid'
 
 const theme = {
-  colorPrimary: '#7037BF',
-  colorSecondary: '#FF83C6',
-  colorBackground: '#0057AC',
-  colorText: '#E8CCC3',
-  colorAffirmative: '#11819C',
-  colorNegative: '#D92563',
-  colorCaution: '#FEDF00',
-  textFont: '"HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif'
+	colorPrimary: '#7037BF',
+	colorSecondary: '#FF83C6',
+	colorBackground: '#0057AC',
+	colorText: '#E8CCC3',
+	colorAffirmative: '#11819C',
+	colorNegative: '#D92563',
+	colorCaution: '#FEDF00',
+	textFont:
+		'"HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif'
 }
 
 const GlobalStyle = createGlobalStyle`
   :root {
-    --colorPrimary: ${ props => props.theme.colorPrimary};
-  --colorSecondary: ${ props => props.theme.colorSecondary};
-  --colorBackground: ${ props => props.theme.colorBackground};
-  --colorText: ${ props => props.theme.colorText};
-  --colorAffirmative: ${ props => props.theme.colorAffirmative};
-  --colorNegative: ${ props => props.theme.colorNegative};
-  --colorCaution: ${ props => props.theme.colorCaution};
-  --textFont: ${ props => props.theme.textFont};
+    --colorPrimary: ${props => props.theme.colorPrimary};
+  	--colorSecondary: ${props => props.theme.colorSecondary};
+  	--colorBackground: ${props => props.theme.colorBackground};
+  	--colorText: ${props => props.theme.colorText};
+  	--colorAffirmative: ${props => props.theme.colorAffirmative};
+  	--colorNegative: ${props => props.theme.colorNegative};
+  	--colorCaution: ${props => props.theme.colorCaution};
+  	--textFont: ${props => props.theme.textFont};
   } 
 
   html {
     color: var(--colorText);
     background: var(--colorBackground);
     font-family: var(--textFont);
-  }
+	}
 `
-
 
 /*
 const colorPrimary = '#7037BF'
@@ -64,17 +65,18 @@ const GlobalStyle = createGlobalStyle`
 `
 */
 
-export const Layout: React.FC = props =>
-  <>
-    <Head>
-      <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1, shrink-to-fit=no"
-      />
-    </Head>
-    <Header />
-    <Content>
-      {props.children}
-    </Content>
-    <Footer />
-  </>
+export const Layout: React.FC = props => (
+	<>
+		<Head>
+			<meta
+				name="viewport"
+				content="width=device-width, initial-scale=1, shrink-to-fit=no"
+			/>
+		</Head>
+		<Grid>
+			<Header />
+			<Content>{props.children}</Content>
+			<Footer />
+		</Grid>
+	</>
+)
